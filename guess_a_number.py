@@ -1,9 +1,10 @@
 import random
+import math
 
 # config
 low = 1
-high = 10
-limit = 4
+high = 100
+limit = math.ceil(math.log((high - low) +1 , 2))
 
 # helper functions
 def show_start_screen():
@@ -26,6 +27,7 @@ def get_guess():
 
 def pick_number():
     print("I'm thinking of a number from " + str(low) + " to " + str(high) +".")
+    print("You get " + str(limit) + " tries.")
 
     return random.randint(low, high)
 
