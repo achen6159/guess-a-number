@@ -13,7 +13,9 @@ def show_start_screen():
     print("**************************")
 
 def show_credits():
-    print("This awesome game was created by Annie")
+    print("******************************************")
+    print("**This awesome game was created by Annie**")
+    print("******************************************")
     
 def get_guess():
     while True:
@@ -45,11 +47,11 @@ def show_result(guess, rand):
 
 def play_again():
     while True:
-        decision = input("Would you like to play again? (y/n) ")
+        decision = str.upper(input("Would you like to play again? (y/n) "))
 
-        if decision == 'y' or decision == 'yes':
+        if decision == 'Y' or decision == 'YES':
             return True
-        elif decision == 'n' or decision == 'no':
+        elif decision == 'N' or decision == 'NO':
             return False
         else:
             print("I don't understand. Please enter 'y' or 'n'.")
