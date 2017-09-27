@@ -15,12 +15,17 @@ def show_credits():
     pass
     
 def get_guess(current_low, current_high):
+    guess = ((current_high + current_low)//2)
+    return guess
     """
     Return a truncated average of current low and high.
     """
     pass
 
 def pick_number():
+    print("Think a number from " + str(low) + " to " + str(high) + ".")
+    something_0 = input("Press enter when you're ready")
+
     """
     Ask the player to think of a number between low and high.
     Then  wait until the player presses enter.
@@ -28,6 +33,15 @@ def pick_number():
     pass
 
 def check_guess(guess):
+    print (guess)
+    answer = input("Tell me if my guess is too low, too high, or if it is correct")
+    if "low" in answer:
+        check = -1
+    elif "high" in answer:
+        check = 1
+    else:
+        check = 0
+    return check
     """
     Computer will ask if guess was too high, low, or correct.
 
@@ -65,13 +79,9 @@ def play():
         check = check_guess(guess)
 
         if check == -1:
-            # adjust current_low
-            pass
+            current_low = guess
         elif check == 1:
-            # adjust current_high
-            pass
-
-    show_result(guess, rand)
+            current_high = guess
 
 
 # Game starts running here

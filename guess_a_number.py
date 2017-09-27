@@ -20,7 +20,6 @@ def show_credits():
 def get_guess():
     while True:
         guess = input("Guess a number: ")
-
         if guess.isnumeric():
             guess = int(guess)
             return guess
