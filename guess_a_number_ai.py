@@ -1,3 +1,8 @@
+#This program lets the computer guess the number you're thinking of.
+#
+#Annie C.
+
+
 import random
 
 # config
@@ -17,44 +22,29 @@ def show_credits():
 def get_guess(current_low, current_high):
     guess = ((current_high + current_low)//2)
     return guess
-    """
-    Return a truncated average of current low and high.
-    """
-    pass
 
 def pick_number():
     print("Think a number from " + str(low) + " to " + str(high) + ".")
     something_0 = input("Press enter when you're ready")
 
-    """
-    Ask the player to think of a number between low and high.
-    Then  wait until the player presses enter.
-    """
-    pass
-
 def check_guess(guess):
     print (guess)
-    answer = input("Tell me if my guess is too low, too high, or if it is correct")
-    if "low" in answer:
+    answer = str.lower(input("Tell me if my guess is too low, too high, or if it is correct"))
+    if answer in ["low", "l"]:
         check = -1
-    elif "high" in answer:
+        return check
+    if answer in ["high", "h"]:
         check = 1
-    else:
+        return check
+    elif answer in ["correct", "yes"]:
         check = 0
-    return check
-    """
-    Computer will ask if guess was too high, low, or correct.
-
-    Returns -1 if the guess was too low
-             0 if the guess was correct
-             1 if the guess was too high
-    """
+        return check
+    else:
+        print("I don't understand. Please say something smart.")
+        print("This number below is still my guess though.")
 
 def show_result():
-    """
-    Says the result of the game. (The computer might always win.)
-    """
-    pass
+    print("I guessed the number right!")
 
 def play_again():
     while True:
@@ -91,6 +81,7 @@ playing = True
 
 while playing:
     play()
+    show_result()
     playing = play_again()
 
 show_credits()
