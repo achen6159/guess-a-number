@@ -7,7 +7,7 @@ import random
 
 # config
 low = 1
-high = 1000
+high = 100
 
 
 # helper functions
@@ -17,7 +17,13 @@ def show_start_screen():
     print("**************************")
 
 def show_credits():
-    pass
+    import time
+    time.sleep(0.2)
+    print("******************************************")
+    time.sleep(0.2)
+    print("**This awesome game was created by Annie**")
+    time.sleep(0.2)
+    print("******************************************")
     
 def get_guess(current_low, current_high):
     guess = ((current_high + current_low)//2)
