@@ -6,8 +6,10 @@ import random
 import math
 import time
 
+
 game_play = True
 while game_play:
+    name = input("Please enter your name")
     print("Would you like to guess a number or would you like the computer to guess a number?")
     response = str.lower(input("If you want to guess the number say me or if you want the computer to guess a number, say you."))
 
@@ -19,14 +21,20 @@ while game_play:
         limit = math.ceil(math.log((high - low) + 1 , 2))
 
         # helper functions
-        def show_start_screen():
-            print("        ***********          ")
-            print("    *******************      ")
-            print("  ***********************    ")
-            print(" ***** Guess a Number! ****  ")
-            print("  ************************   ")
-            print("    *******************      ")
-            print("        ***********          ")
+        def show_start_screen(): 
+            print("                 **********                   ")
+            print("              ****************                ")
+            print("           **********************             ")
+            print("        ****************************          ")
+            print("    ************************************      ")
+            print("  ******************************************  ")
+            print(" ***** Guess a Number " + str(name) + "! **************  ")
+            print("  *****************************************   ")
+            print("    ************************************      ")
+            print("        ****************************          ")
+            print("           **********************             ")
+            print("              *****************               ")
+            print("                 ***********                  ")
 
         def show_credits():
             print("******************************************")
@@ -50,15 +58,15 @@ while game_play:
 
         def check_guess(guess, rand):
             if guess < rand:
-                print("You guessed too low.")
+                print(str(name) + ", You guessed too low.")
             elif guess > rand:
-                print("You guessed too high.")
+                print(str(name) + ", You guessed too high.")
 
         def show_result(guess, rand):
             if guess == rand:
-                print("You win!")
+                print(str(name) + ", You win!")
             else:
-                print("You are such a loser! Looooooosssssseeeerrrr... The number was " + str(rand) + ".")
+                print(str(name) + ", You are such a loser! Looooooosssssseeeerrrr... The number was " + str(rand) + ".")
 
         def play_again():
             while True:
@@ -103,6 +111,7 @@ while game_play:
         # config
         low = 1
         high = 100
+        
 
 
         # helper functions
@@ -147,6 +156,7 @@ while game_play:
                 return check
             else:
                 print("I don't understand. Please say something smart.")
+                print()
                 print("This number below is still my guess though.")
 
         def show_result():
