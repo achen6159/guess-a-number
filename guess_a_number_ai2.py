@@ -22,23 +22,41 @@ while game_play:
 
         # helper functions
         def show_start_screen(): 
+            time.sleep(0.1)
             print("                 **********                   ")
+            time.sleep(0.1)
             print("              ****************                ")
+            time.sleep(0.1)
             print("           **********************             ")
+            time.sleep(0.1)
             print("        ****************************          ")
+            time.sleep(0.1)
             print("    ************************************      ")
+            time.sleep(0.1)
             print("  ******************************************  ")
-            print("     Guess a Number " + str(name) + "!        ")
+            time.sleep(0.1)
+            print("         Guess a Number " + str(name) + "!    ")
+            time.sleep(0.1)
             print("  *****************************************   ")
+            time.sleep(0.1)
             print("    ************************************      ")
+            time.sleep(0.1)
             print("        ****************************          ")
+            time.sleep(0.1)
             print("           **********************             ")
+            time.sleep(0.1)
             print("              *****************               ")
+            time.sleep(0.1)
             print("                 ***********                  ")
 
         def show_credits():
+            time.sleep(0.2)
             print("******************************************")
+            time.sleep(0.2)
             print("**This awesome game was created by Annie**")
+            time.sleep(0.2)
+            print("**This was completed on the 4 of October**")
+            time.sleep(0.2)
             print("******************************************")
 
         def get_guess():
@@ -70,7 +88,7 @@ while game_play:
 
         def play_again():
             while True:
-                decision = str.lower(input("Would you like to play again? (y/n) "))
+                decision = str.lower(input("Would you like to play again? " + str(name) + "(y/n) "))
 
                 if decision == 'y' or decision == 'yes':
                     return True
@@ -120,6 +138,7 @@ while game_play:
             print("    *************************      ")
             print("  *****************************    ")
             print(" ***** Guess a Number A. I.! ****  ")
+            print("*********** " + str(name) + " ***********")
             print("  ******************************   ")
             print("    *************************      ")
             print("        *****************          ")
@@ -164,7 +183,7 @@ while game_play:
 
         def play_again():
             while True:
-                decision = input("Would you like to play again? (y/n) ")
+                decision = input("Would you like to play again? " + str(name) +  "(y/n) ")
 
                 if decision == 'y' or decision == 'yes':
                     return True
