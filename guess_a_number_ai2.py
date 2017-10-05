@@ -134,13 +134,21 @@ while game_play:
 
         # helper functions
         def show_start_screen():
+            time.sleep(0.1)
             print("        *****************          ")
+            time.sleep(0.1)
             print("    *************************      ")
+            time.sleep(0.1)
             print("  *****************************    ")
+            time.sleep(0.1)
             print(" ***** Guess a Number A. I.! ****  ")
+            time.sleep(0.1)
             print("*********** " + str(name) + " ***********")
+            time.sleep(0.1)
             print("  ******************************   ")
+            time.sleep(0.1)
             print("    *************************      ")
+            time.sleep(0.1)
             print("        *****************          ")
 
         def show_credits():
