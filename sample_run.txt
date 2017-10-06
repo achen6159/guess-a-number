@@ -1,0 +1,37 @@
+#This is a sample run of my guess_a_number_ai2
+
+
+
+Please enter your nameAnnie
+Would you like to guess a number or would you like the computer to guess a number?
+If you want to guess the number say me or if you want the computer to guess a number, say you.me
+                 **********                   
+              ****************                
+           **********************             
+        ****************************          
+    ************************************      
+  ******************************************  
+         Guess a Number Annie!    
+  *****************************************   
+    ************************************      
+        ****************************          
+           **********************             
+              *****************               
+                 ***********                  
+I'm thinking of a number from 1 to 100.
+You get 7 tries.
+Guess a number: 51
+Annie, You guessed too low.
+Guess a number: 75
+Annie, You guessed too low.
+Guess a number: 90
+Annie, You guessed too high.
+Guess a number: 86
+Annie, You guessed too low.
+Guess a number: 88
+Annie, You win!
+Would you like to play again? Annie(y/n) n
+******************************************
+**This awesome game was created by Annie**
+**This was completed on the 4 of October**
+******************************************
